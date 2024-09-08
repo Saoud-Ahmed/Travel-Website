@@ -13603,7 +13603,7 @@ input[type="submit"].form-control:focus {
 /* MAIN FOOTER
 =====================================*/
 #footer-section {
-  background: #239D9C;
+  background: #63B7B7;
   position: relative;
 }
 
@@ -14178,6 +14178,81 @@ input[type="submit"].form-control:focus {
 /*   [Trip itinerary Page -] 
 ======================================= */
 
+.slider-left, .slider-right {
+  position: absolute;
+  top: 30%;
+  z-index: 100000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  display: inline-flex; /* Ensures the button only takes up the necessary space */
+  align-items: center; /* Vertically centers the icon */
+  justify-content: center; /* Horizontally centers the icon */
+  width: auto; /* Allows the button width to be based on content */
+  height: auto; /* Allows the button height to be based on content */
+}
+
+.slider-left {
+  left: -1rem; /* Adjust to your desired position */
+  color: #239D9C;
+}
+
+.slider-right {
+  right: -1rem; /* Adjust to your desired position */
+  color: #239D9C;
+}
+
+/* Ensure the icon inside the button is styled properly */
+.slider-left i, .slider-right i {
+  font-size: 5rem;
+  color: inherit; /* Inherit color from parent button */
+}
+
+/* Optionally, add hover effects */
+.slider-left:hover, .slider-right:hover {
+  opacity: 0.8;
+}
+
+
+
+/* Optional: Add responsive styles for different screen sizes */
+@media (max-width: 768px) {
+  .owl-carousel .item {
+      padding: 0 5px; /* Adjust padding for smaller screens */
+  }
+  .slider-left {
+    left: -1rem; /* Adjust to your desired position */
+    color: #239D9C;
+    font-size: 3REM !important;
+  }
+  
+  .slider-right {
+    right: -1rem; /* Adjust to your desired position */
+    color: #239D9C;
+    font-size: 3REM !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .owl-carousel .item {
+      padding: 0 5px; /* Adjust padding for smaller screens */
+  }
+  .slider-left {
+    left: 0.5rem; /* Adjust to your desired position */
+    color: #239D9C;
+    font-size: 1REM !important;
+  }
+  
+  .slider-right {
+    right: 0.5rem; /* Adjust to your desired position */
+    color: #239D9C;
+    font-size: 1REM !important;
+  }
+}
+
 
 
 .reduce-section-title{
@@ -14429,6 +14504,7 @@ input[type="submit"].form-control:focus {
 
 .point-icon {
   margin-right: 10px;
+  width: 7rem;
 }
 
 .point-text h3 {
@@ -14723,7 +14799,7 @@ input[type="submit"].form-control:focus {
 }
 
 .custom-paragraph {
-  font-size: 1.2rem; /* Increased font size for the paragraph */
+  font-size: 1.3rem; /* Increased font size for the paragraph */
   line-height: 1.8; /* Line height for readability */
 }
 
@@ -15186,7 +15262,7 @@ input[type="submit"].form-control:focus {
 #ps-4{
 
   position: relative;
-  background-image: url('/assets/bg/ep3.jpg');
+  background-image: url('/assets/leisurethrills/h-b-2.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -15197,6 +15273,7 @@ input[type="submit"].form-control:focus {
   justify-content: center;
   text-align: center; /* Center all text inside the section */
   width: 100vw;
+  
 }
 
 .exp-left{
@@ -15358,18 +15435,22 @@ input[type="submit"].form-control:focus {
 .travel-box {
   position: relative;
   overflow: hidden;
-  margin: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   height: 100%; /* Ensures all boxes have the same height */
+  border: 1px solid #ddd;
+            padding: 15px;
+            margin: 15px 0;
 }
 
 /* Travel image with consistent size and aspect ratio */
 .travel-image {
-  width: 100%;
-  height: 200px; /* Fixed height for consistency */
+  width: 100%; /* Make the image fill the width of its container */
+  height: 15rem; /* Set a fixed height for the images */
   object-fit: cover; /* Ensures the image covers the area without distortion */
+
 }
 
 /* Travel details section aligned to the left with flexbox to fill remaining space */
@@ -15391,10 +15472,14 @@ input[type="submit"].form-control:focus {
 }
 
 /* Travel title styling */
+/* Travel title styling */
 .travel-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #2b343d;
   margin-bottom: 15px;
+  overflow: hidden; /* Hides the overflow text */
+  text-overflow: ellipsis; /* Displays an ellipsis for overflow text */
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
 }
 
 /* Small text styling */
@@ -15404,20 +15489,53 @@ input[type="submit"].form-control:focus {
   margin-bottom: 3px;
 }
 
-/* Ensure all travel boxes are the same height */
-.col-lg-4, .col-md-6, .col-sm-12 {
-  display: flex;
-  flex-direction: column;
-}
+
 
 .travel-box {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-top: 1rem; /* Space between boxes */
+  padding: 1rem; /* Add padding as needed */
+  margin-bottom: 1rem; /* Space between boxes */
+  box-sizing: border-box;
 }
 
+/* Filter column styles */
+.filter-column {
+  background-color: #63B7B7;
+  padding:10px 20px 20px 20px;
 
+  margin-bottom: 10px;
+  margin-top: 10px;
+  
+}
+
+.filter-option label{
+  color: white;
+}
+
+.filter-box {
+  position: sticky;
+  top: 20px;
+}
+
+.filter-option {
+  margin-bottom: 15px;
+}
+
+.filter-option label {
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.filter-option select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1.2rem;
+}
 
 
 /* end of alpine adv PAGE 

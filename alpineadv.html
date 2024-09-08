@@ -59,7 +59,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="experiencespage.html" ><span id="experiences-link">Experiences<i class="fa fa-caret-down" aria-hidden="true" style="margin-left:5px ;"></i></span></a></li>
 								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">About Us</a></li>
+								<li><a href="aboutsus.html">About Us</a></li>
 							</ul>
 							<a class="header-btn btn small colorful hover-dark" id="inspire-btn" href="#">Plan now</a>
 							<div class="mobile-menu-btn hamburger hamburger--slider">
@@ -171,95 +171,185 @@
                 <hr class="thickbreakline">
 
                 <!-- START OF EXPERIENCES TRIP SECTION-->
-
+		
 				<div class="container travel-container">
 					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/alpine.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">8 DAYS STARTING AT</span>
-										<span class="travel-price">$2790</span>
-										<span class="travel-title">K2 Base Camp</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
+						<!-- Filter Column -->
+						<div class="col-lg-3 col-md-3 col-sm-12 filter-column">
+							<div class="filter-box">
+								<h4 style="color: white; text-align:center">Filter Options</h4>
+								<div class="filter-option">
+									<label for="tripType">Trip Type</label>
+									<select id="tripType">
+										<option value="all">All</option>
+										<option value="adventure">Adventure</option>
+										<option value="culture">Culture and Heritage</option>
+										<option value="trekking">Trekking</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="activityLevel">Activity Level</label>
+									<select id="activityLevel">
+										<option value="all">All</option>
+										<option value="high">High</option>
+										<option value="medium">Medium</option>
+										<option value="low">Low</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="priceRange">Price Range</label>
+									<select id="priceRange">
+										<option value="all">All</option>
+										<option value="0-1000">Under $1000</option>
+										<option value="1000-2000">$1000 - $2000</option>
+										<option value="2000-3000">$2000 - $3000</option>
+										<option value="3000-4000">$3000 - $4000</option>
+										<option value="4000-5000">$4000 - $5000</option>
+										<option value="5000+">Over $5000</option>
+									</select>
+								</div>
+								<!-- Filter Button -->
+								<button id="filterButton" onclick="filterTrips()">Filter</button>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/cult.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">10 DAYS STARTING AT</span>
-										<span class="travel-price">$3490</span>
-										<span class="travel-title">Nanga Parbat & Rakaposhi Base Camp </span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+				
+						<!-- Travel Boxes Columns -->
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							<div class="row" id="travelBoxContainer">
+								<!-- Travel Box 1 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="3500">
+									<div class="travel-box-inner">
+										<a href="rnShimsal-aa1.html">
+											<img src="assets/alpineadv/g-j-2.jpg" class="travel-image" alt="K2 Base Camp">
+											<div class="travel-details">
+												<span class="small-text">19 DAYS STARTING AT</span>
+												<span class="travel-price">$3500</span>
+												<span class="travel-title">Shimsal Pass Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/lei.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">7 DAYS STARTING AT</span>
-										<span class="travel-price">$1890</span>
-										<span class="travel-title">Patundas Trek</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="rnRushLake-aa2.html">
+											<img src="assets/alpineadv/r-l-1.jpg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">12 DAYS STARTING AT</span>
+												<span class="travel-price">$2000</span>
+												<span class="travel-title">Rush Lake Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/seasons.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">12 DAYS STARTING AT</span>
-										<span class="travel-price">$2250</span>
-										<span class="travel-title">Rush Lake Trek </span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="2500">
+									<div class="travel-box-inner">
+										<a href="rnShimsal13d-aa3.html">
+											<img src="assets/alpineadv/s-v-1.jpg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">13 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">Shimsal Valley Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">K2 Base Camp with Heli Option </span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="2500">
+									<div class="travel-box-inner">
+										<a href="rnBaturaGlacier-aa4.html">
+											<img src="assets/alpineadv/b-g-1.jpg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">16 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">Batura Glacier Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/naturewalks.webp" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">5 DAYS STARTING AT</span>
-										<span class="travel-price">$1490</span>
-										<span class="travel-title">Shimshall pass Trek </span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 1 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="3500">
+									<div class="travel-box-inner">
+										<a href="rnK2BaseCamp-aa5.html">
+											<img src="assets/alpineadv/k-2-1.jpg" class="travel-image" alt="K2 Base Camp">
+											<div class="travel-details">
+												<span class="small-text">23 DAYS STARTING AT</span>
+												<span class="travel-price">$3500</span>
+												<span class="travel-title">K2 Base Camp</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
 									</div>
-								</a>
+								</div>
+								<!-- Travel Box 2 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="high" data-price="2500">
+									<div class="travel-box-inner">
+										<a href="rnpNangaParbat-aa6.html">
+											<img src="assets/alpineadv/n-p-1.jpg" class="travel-image" alt="Nanga Parbat & Rakaposhi Base Camp">
+											<div class="travel-details">
+												<span class="small-text">12 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">Nanga Parbat & Rakaposhi Base Camp</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<!-- Travel Box 3 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="rnptripdetailsindex.html">
+											<img src="assets/experiences/nangaparbat.webp" class="travel-image" alt="Patundas Trek">
+											<div class="travel-details">
+												<span class="small-text">14 DAYS STARTING AT</span>
+												<span class="travel-price">$2000</span>
+												<span class="travel-title">Patundas Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								<!-- Travel Box 3 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="high" data-price="3000">
+									<div class="travel-box-inner">
+										<a href="rnTirichMir-aa7.html">
+											<img src="assets/alpineadv/t-m-1.jpg" class="travel-image" alt="Patundas Trek">
+											<div class="travel-details">
+												<span class="small-text">15 DAYS STARTING AT</span>
+												<span class="travel-price">$3000</span>
+												<span class="travel-title">Tirich Mir Trek</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> High</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								
 							</div>
 						</div>
 					</div>
 				</div>
+				
+
+				
+
 				
 				
             </div>
@@ -288,7 +378,7 @@
 									<h3>Newsletter</h3>
 								</div>
 								<div class="footer-text">
-									<p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+									<p>At Crossroads Adventure, we understand how valuable your time is. Sign up for only the most pertinent and interesting travel info</p>
 								</div>
 								<div class="subscribe-form">
 									<form action="#">

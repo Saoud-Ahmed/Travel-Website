@@ -59,7 +59,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="experiencespage.html" ><span id="experiences-link">Experiences<i class="fa fa-caret-down" aria-hidden="true" style="margin-left:5px ;"></i></span></a></li>
 								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">About Us</a></li>
+								<li><a href="aboutsus.html">About Us</a></li>
 							</ul>
 							<a class="header-btn btn small colorful hover-dark" id="inspire-btn" href="#">Plan now</a>
 							<div class="mobile-menu-btn hamburger hamburger--slider">
@@ -174,88 +174,160 @@
 
 				<div class="container travel-container">
 					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/alpine.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">8 DAYS STARTING AT</span>
-										<span class="travel-price">$2790</span>
-										<span class="travel-title">Jeep Safaris</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
+						<!-- Filter Column -->
+						<div class="col-lg-3 col-md-3 col-sm-12 filter-column">
+							<div class="filter-box">
+								<h4 style="color: white; text-align:center">Filter Options</h4>
+								<div class="filter-option">
+									<label for="tripType">Trip Type</label>
+									<select id="tripType">
+										<option value="all">All</option>
+										<option value="adventure">Adventure</option>
+										<option value="culture">Culture and Heritage</option>
+										<option value="trekking">Trekking</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="activityLevel">Activity Level</label>
+									<select id="activityLevel">
+										<option value="all">All</option>
+										<option value="high">High</option>
+										<option value="medium">Medium</option>
+										<option value="low">Low</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="priceRange">Price Range</label>
+									<select id="priceRange">
+										<option value="all">All</option>
+										<option value="0-1000">Under $1000</option>
+										<option value="1000-2000">$1000 - $2000</option>
+										<option value="2000-3000">$2000 - $3000</option>
+										<option value="3000-4000">$3000 - $4000</option>
+										<option value="4000-5000">$4000 - $5000</option>
+										<option value="5000+">Over $5000</option>
+									</select>
+								</div>
+								<!-- Filter Button -->
+								<button id="filterButton" onclick="filterTrips()">Filter</button>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/cult.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">10 DAYS STARTING AT</span>
-										<span class="travel-price">$3490</span>
-										<span class="travel-title">Bike Tours</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+				
+						<!-- Travel Boxes Columns -->
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							<div class="row" id="travelBoxContainer">
+								<!-- Travel Box 1 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="medium" data-price="3000">
+									<div class="travel-box-inner">
+										<a href="hunzaBaltistan-lt1.html">
+											<img src="assets/leisurethrills/h-b-1.jpg" class="travel-image" alt="K2 Base Camp">
+											<div class="travel-details">
+												<span class="small-text">14 DAYS STARTING AT</span>
+												<span class="travel-price">$3000</span>
+												<span class="travel-title">Hunza-Baltistan Premium Expedition</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/lei.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">7 DAYS STARTING AT</span>
-										<span class="travel-price">$1890</span>
-										<span class="travel-title">Paragliding</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="medium" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="honeymoon-lt2.html">
+											<img src="assets/leisurethrills/h-m-1.jpg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">14 DAYS STARTING AT</span>
+												<span class="travel-price">$2000</span>
+												<span class="travel-title">VIP Honeymoon Expedition</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/seasons.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">12 DAYS STARTING AT</span>
-										<span class="travel-price">$2250</span>
-										<span class="travel-title">Rafting etc.</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="trekking" data-activity-level="medium" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="kashmirEscape-lt3.html">
+											<img src="assets/leisurethrills/k-e-1.jpeg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">10 DAYS STARTING AT</span>
+												<span class="travel-price">$2000</span>
+												<span class="travel-title">Kashmir Escapade</span>
+												<span class="small-text"><b>Trip Type:</b> Trekking</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">Hunting</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 4 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="culture" data-activity-level="low" data-price="2500">
+									<div class="travel-box-inner">
+										<a href="southeast-lt4.html">
+											<img src="assets/leisurethrills/s-e-2.jpg" class="travel-image" alt="Rush Lake Trek">
+											<div class="travel-details">
+												<span class="small-text">9 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">SouthEast Pakistan's Treasures</span>
+												<span class="small-text"><b>Trip Type:</b> Culture and Heritage</span>
+												<span class="small-text"><b>Activity Level:</b> Low</span>
+											</div>
+										</a>
 									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/naturewalks.webp" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">5 DAYS STARTING AT</span>
-										<span class="travel-price">$1490</span>
-										<span class="travel-title">Sightseeing</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
+								</div>
+
+								<!-- Travel Box 1 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="medium" data-price="2500">
+									<div class="travel-box-inner">
+										<a href="shogranNaranetc-lt5.html">
+											<img src="assets/leisurethrills/s-nk-1.jpg" class="travel-image" alt="K2 Base Camp">
+											<div class="travel-details">
+												<span class="small-text">11 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">Shogran-Naran-Hunza Expedition</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
 									</div>
-								</a>
+								</div>
+								<!-- Travel Box 2 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="medium" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="hunzaFairy-lt6.html">
+											<img src="assets/maps/h-fw-1.png" class="travel-image" alt="Nanga Parbat & Rakaposhi Base Camp">
+											<div class="travel-details">
+												<span class="small-text">11 DAYS STARTING AT</span>
+												<span class="travel-price">$2000</span>
+												<span class="travel-title">Hunza and Fairy Meadows Expedition</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
+									</div>
+								</div>
+
+								<!-- Travel Box 2 -->
+								<div class="col-lg-4 col-md-6 col-sm-12 travel-box" data-trip-type="adventure" data-activity-level="medium" data-price="2000">
+									<div class="travel-box-inner">
+										<a href="hunzaNaltar-lt7.html">
+											<img src="assets/leisurethrills/h-n-1.jpg" class="travel-image" alt="Nanga Parbat & Rakaposhi Base Camp">
+											<div class="travel-details">
+												<span class="small-text">10 DAYS STARTING AT</span>
+												<span class="travel-price">$2500</span>
+												<span class="travel-title">Hunza and Naltar Valley Expedition</span>
+												<span class="small-text"><b>Trip Type:</b> Adventure</span>
+												<span class="small-text"><b>Activity Level:</b> Medium</span>
+											</div>
+										</a>
+									</div>
+								</div>
+								
+								
 							</div>
 						</div>
 					</div>
@@ -288,7 +360,7 @@
 									<h3>Newsletter</h3>
 								</div>
 								<div class="footer-text">
-									<p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+									<p>At Crossroads Adventure, we understand how valuable your time is. Sign up for only the most pertinent and interesting travel info</p>
 								</div>
 								<div class="subscribe-form">
 									<form action="#">

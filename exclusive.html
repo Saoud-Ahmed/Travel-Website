@@ -59,7 +59,7 @@
 								<li><a href="index.html">Home</a></li>
 								<li><a href="experiencespage.html" ><span id="experiences-link">Experiences<i class="fa fa-caret-down" aria-hidden="true" style="margin-left:5px ;"></i></span></a></li>
 								<li><a href="#">Testimonials</a></li>
-								<li><a href="#">About Us</a></li>
+								<li><a href="aboutsus.html">About Us</a></li>
 							</ul>
 							<a class="header-btn btn small colorful hover-dark" id="inspire-btn" href="#">Plan now</a>
 							<div class="mobile-menu-btn hamburger hamburger--slider">
@@ -174,119 +174,49 @@
 
 				<div class="container travel-container">
 					<div class="row">
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/alpine.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">8 DAYS STARTING AT</span>
-										<span class="travel-price">$2790</span>
-										<span class="travel-title">Documentary</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
+						<!-- Filter Column -->
+						<div class="col-lg-3 col-md-3 col-sm-12 filter-column">
+							<div class="filter-box">
+								<h4 style="color: white; text-align:center">Filter Options</h4>
+								<div class="filter-option">
+									<label for="tripType">Trip Type</label>
+									<select id="tripType">
+										<option value="all">All</option>
+										<option value="adventure">Adventure</option>
+										<option value="culture">Culture and Heritage</option>
+										<option value="trekking">Trekking</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="activityLevel">Activity Level</label>
+									<select id="activityLevel">
+										<option value="all">All</option>
+										<option value="high">High</option>
+										<option value="medium">Medium</option>
+										<option value="low">Low</option>
+									</select>
+								</div>
+								<div class="filter-option">
+									<label for="priceRange">Price Range</label>
+									<select id="priceRange">
+										<option value="all">All</option>
+										<option value="0-1000">Under $1000</option>
+										<option value="1000-2000">$1000 - $2000</option>
+										<option value="2000-3000">$2000 - $3000</option>
+										<option value="3000-4000">$3000 - $4000</option>
+										<option value="4000-5000">$4000 - $5000</option>
+										<option value="5000+">Over $5000</option>
+									</select>
+								</div>
+								<!-- Filter Button -->
+								<button id="filterButton" onclick="filterTrips()">Filter</button>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/cult.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">10 DAYS STARTING AT</span>
-										<span class="travel-price">$3490</span>
-										<span class="travel-title">Research</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
+				
+						<!-- Travel Boxes Columns -->
+						<div class="col-lg-9 col-md-9 col-sm-12">
+							
 						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/lei.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">7 DAYS STARTING AT</span>
-										<span class="travel-price">$1890</span>
-										<span class="travel-title">Hunting</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/seasons.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">12 DAYS STARTING AT</span>
-										<span class="travel-price">$2250</span>
-										<span class="travel-title">Cycling Tours</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">Biking Tours</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">Paragliding</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">Rafting</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="travel-box">
-								<a href="#">
-									<img src="assets/trips/ski.jpg" class="travel-image">
-									<div class="travel-details">
-										<span class="small-text">6 DAYS STARTING AT</span>
-										<span class="travel-price">$3150</span>
-										<span class="travel-title">Skiing</span>
-										<span class="small-text"><b>Trip Type:</b> Adventure</span>
-										<span class="small-text"><b>Activity Level:</b> High</span>
-									</div>
-								</a>
-							</div>
-						</div>
-						
 					</div>
 				</div>
 				
@@ -317,7 +247,7 @@
 									<h3>Newsletter</h3>
 								</div>
 								<div class="footer-text">
-									<p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+									<p>At Crossroads Adventure, we understand how valuable your time is. Sign up for only the most pertinent and interesting travel info</p>
 								</div>
 								<div class="subscribe-form">
 									<form action="#">

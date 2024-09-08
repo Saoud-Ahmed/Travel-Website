@@ -176,6 +176,86 @@ $(document).ready(function() {
 });
 
 
-  
+
+
+$(document).ready(function() {
+    // Initialize Owl Carousel for the specific carousel within .popular-packages-slider
+    var owl = $('.popular-packages-slider .owl-carousel').owlCarousel({
+       
+        margin: 20,        // Margin between items
+        nav: false,        // Disable default navigation
+        dots: false,
+        items: 3,          // Show 3 items at a time
+        responsive: {
+            0: {
+                items: 1  // For very small screens, show 1 item
+            },
+            600: {
+                items: 2  // For medium screens, show 2 items
+            },
+            1000: {
+                items: 3  // For large screens, show 3 items
+            }
+        }
+    });
+
+    $('.slider-left').on('click', function() {
+        owl.trigger('prev.owl.carousel'); // Go to the previous slide
+    });
+
+    $('.slider-right').on('click', function() {
+        owl.trigger('next.owl.carousel'); // Go to the next slide
+    });
+    
+});
+
 
 });
+
+
+function filterTrips() {
+    // Get filter values
+    var tripType = document.getElementById('tripType').value;
+    var activityLevel = document.getElementById('activityLevel').value;
+    var priceRange = document.getElementById('priceRange').value;
+
+    // Get all travel boxes
+    var travelBoxes = document.querySelectorAll('.travel-box');
+
+    travelBoxes.forEach(function(box) {
+        var boxTripType = box.getAttribute('data-trip-type');
+        var boxActivityLevel = box.getAttribute('data-activity-level');
+        var boxPrice = parseInt(box.getAttribute('data-price'));
+
+        var showBox = true;
+
+        // Filter by trip type
+        if (tripType !== 'all' && boxTripType !== tripType) {
+            showBox = false;
+        }
+
+        // Filter by activity level
+        if (activityLevel !== 'all' && boxActivityLevel !== activityLevel) {
+            showBox = false;
+        }
+
+        // Filter by price range
+        if (priceRange !== 'all') {
+            var [minPrice, maxPrice] = priceRange.split('-').map(Number);
+            if (priceRange === '5000+' && boxPrice <= 5000) {
+                showBox = false;
+            } else if (boxPrice < minPrice || boxPrice > (maxPrice || Infinity)) {
+                showBox = false;
+            }
+        }
+
+        // Show or hide the box based on filters
+        if (showBox) {
+            box.style.display = 'block';
+        } else {
+            box.style.display = 'none';
+        }
+    });
+}
+
+

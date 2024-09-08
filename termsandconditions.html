@@ -48,38 +48,77 @@
 		<!-- Header
 		============================================= -->
 		<header id="header">
-
-			<div id="header-wrap" style="background-color: rgba(35,157,156,0.3);">
-
+			<div id="header-wrap"  style="background-color: rgba(35,157,156,0.3);">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-12">
-
-							<a class="logo" href="#">
+							<a class="logo" href="index.html">
 								<img src="assets/logo/logo-png.png" id="header-logo" alt="" loading="lazy">
-							</a><!-- .logo end -->
-							
-							<ul class="main-menu">
+							</a>
+							<ul class="main-menu" id="main-menu">
 								<li><a href="index.html">Home</a></li>
-								<li><a href="experiencespage.html">Experiences</a></li>
-                                <li><a data-scroll-nav="5" href="#happy-clients">Testimonials</a></li>
-                                <li><a href="#about-us">About Us</a></li>
-                            </ul>
-						
+								<li><a href="experiencespage.html" ><span id="experiences-link">Experiences<i class="fa fa-caret-down" aria-hidden="true" style="margin-left:5px ;"></i></span></a></li>
+								<li><a href="#">Testimonials</a></li>
+								<li><a href="aboutsus.html">About Us</a></li>
+							</ul>
 							<a class="header-btn btn small colorful hover-dark" id="inspire-btn" href="#">Plan now</a>
 							<div class="mobile-menu-btn hamburger hamburger--slider">
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>
 								</span>
-							</div><!-- .mobile-menu-btn -->
-							<div id="mobile-menu"></div><!-- #mobile-menu end -->
-						</div><!-- .col-md-12 end -->
-					</div><!-- .row end -->
-				</div><!-- .container end -->
-
-			</div><!-- #header-wrap end -->
-
-		</header><!-- #header end -->
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+				<div id="mobile-menu"></div>
+					<!-- Sliding bar that appears on clicking Experiences -->
+					<div id="experiences-bar">
+						<ul class="expbar-list">
+						  <li class="expbar-item">
+							<a href="alpineadv.html">
+							  <img src="assets/icons/alpine.png" class="expbar-icons" alt="Alpine Adventures">
+							  <p class="expbar-text">Alpine Adventures</p>
+							</a>
+						  </li>
+						  <li class="expbar-item">
+							<a href="culterheritage.html">
+							  <img src="assets/icons/ruins.png" class="expbar-icons" alt="Culture & Heritage Expeditions">
+							  <p class="expbar-text">Culture & Heritage Expeditions</p>
+							</a>
+						  </li>
+						  <li class="expbar-item">
+							<a href="leisurethrills.html">
+							  <img src="assets/icons/safari.png" class="expbar-icons" alt="Leisurely Thrills">
+							  <p class="expbar-text">Leisurely Thrills</p>
+							</a>
+						  </li>
+						  <li class="expbar-item">
+							<a href="seasonal.html">
+							  <img src="assets/icons/season.png" class="expbar-icons" alt="Seasonal Splendors">
+							  <p class="expbar-text">Seasonal Splendors</p>
+							</a>
+						  </li>
+						  <li class="expbar-item">
+							<a href="exclusive.html">
+							  <img src="assets/icons/sign.png" class="expbar-icons" alt="Exclusive Interest Tours">
+							  <p class="expbar-text">Exclusive Interest Tours</p>
+							</a>
+						  </li>
+						  <li class="expbar-item">
+							<a href="wellness.html">
+							  <img src="assets/icons/forest.png" class="expbar-icons" alt="Wellness Excursion">
+							  <p class="expbar-text">Wellness Excursion</p>
+							</a>
+						  </li>
+						</ul>
+					  </div>
+					  
+					
+			</div>
+		
+		</header>
 
         <!--=====================================================================-->
         <!--======================content start=====================-->
@@ -218,7 +257,7 @@
 									<h3>Newsletter</h3>
 								</div>
 								<div class="footer-text">
-									<p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+									<p>At Crossroads Adventure, we understand how valuable your time is. Sign up for only the most pertinent and interesting travel info</p>
 								</div>
 								<div class="subscribe-form">
 									<form action="#">
